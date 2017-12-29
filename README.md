@@ -1,5 +1,5 @@
 # dockerkube
-A Docker image that runs minikube inside
+A Docker image that runs minikube inside.
 
 This image runs minikube using the 'local' VM driver. That means all the
 kubernetes processes run on the host's resources, but in a container.
@@ -11,7 +11,7 @@ $ docker run --privileged -v /lib/modules:/lib/modules ecejjar/dockerkube
 
 Once up, you can run helm and kubectl inside the container:
 
-$ docker exec -it <container-name> kubectl get all -n kube-system
+$ docker exec -it my-container kubectl get all -n kube-system
 
 Since security hasn't been patched yet, you cannot access kubernetes from
 outside the container for now.
