@@ -11,8 +11,8 @@ $ docker run --privileged -v /lib/modules:/lib/modules ecejjar/dockerkube
 
 Once up, you can run helm and kubectl inside the container:
 
-$ kubectl exec -it <container-name> kubectl get all -n kube-system
+$ docker exec -it <container-name> kubectl get all -n kube-system
 
 Since security hasn't been patched yet, you cannot access kubernetes from
-outside the container.
+outside the container for now.
 
